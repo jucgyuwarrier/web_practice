@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0 auto;
+            padding: 0px;
+            width: 1200px;
+        }
+         header {
+            margin: 5px;
+            border: 1px solid blue;
+            
+            height: 80px;
+            padding: 10px;
+        }
+    
+        nav {
+            border: 1px solid blue;
+            margin: 5px;
+           
+            height: 70px;
+        }
+        section {
+            border: 1px solid blue;
+            margin: 5px;
+            width: 63%;
+            height : 300px;
+            float: left;
+        }
+        aside {
+            border: 1px solid blue;
+            margin: 5px;
+            width: 33%;
+            height: 300px;
+            float: right;
+            
+            
+        }
+        footer {
+            background: skyblue;
+            margin: 5px;
+            clear: both;
+            height: 250px;
+            border-top: 1px solid grey;
+            border-left: 1px solid blue;
+            border-right: 1px solid blue;
+            border-bottom: 1px solid blue;
+        }
+        footer #footerbox1 {
+            background-color: white;
+            margin: 0 auto;
+            height: 100px;
+            width: 80%;
+        }
+        footer #footerbox1 #address {
+            margin: 10px;
+            float: left;
+            height: auto;
+            width: auto;
+        }
+        footer #footerbox1 #customer {
+            margin-top: -20px;
+            float: right;
+            height: auto;
+            width: auto;
+        }
+        img {
+            margin: 10px;
+            float: right;
+        }
+        #customer h2 {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h3><b style="color: blue;">상단 헤더</b></h3>
+    </header>
+        <nav>
+            <h3><b style="color: blue;">내비게이션 메뉴</b></h3>
+        </nav>
+        <div id="contents">
+        <section>
+            <h3><b style="color: blue;">메인 콘텐츠</b></h3>
+        </section>
+     <aside>
+        <h3><b style="color: blue;">사이드바</b></h3>
+     </aside>
+    </div>
+     <footer>
+        <h3><b style="color: blue;">하단 푸터</b></h3>
+        <div id="footerbox1">
+        <div id="address">
+           <small><p>루바로 손해보험(주) | 대표이사 : 홍길동 | 사업자 등록번호 : 123-12-123456 <br>
+            전화: 02-123-1234 | 서울시 강남구 가나다동 123번지</p>
+            Copyright by Rubaro Company All right reserved.
+           </small>
+           </div>
+            <div id="customer">
+                <h2><b>고객센터 1588-1234</b></h2>
+                <img src="../images/america-flag-2043285_640.png" height="20px" width="20px">
+                <img src="../images/america-flag-2043285_640.png" height="20px" width="20px">
+                <img src="../images/america-flag-2043285_640.png" height="20px" width="20px">
+            </div>
+        </div>
+     </footer>
+</body>
+</html>

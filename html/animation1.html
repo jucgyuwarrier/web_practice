@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation</title>
+    <style>
+        .box {
+            margin-top: 50px;
+            margin-left: 100px;
+            padding: 20px;
+            height: 60px;
+            animation-name: moving;
+            animation-duration: 3s; /*3초에 걸쳐 */
+            animation-direction:normal; /*애니메이션 끝난후 원래 위치로 이동*/
+            animation-iteration-count: infinite; /*무한 반복*/
+        }
+
+        @keyframes moving {
+        from {
+            width: 200px;
+            background: yellow;
+            opacity: 0.5;
+            transform: scale(0.5) rotate(15deg);
+        }
+            to {
+                width: 400px;
+                background: orange;
+                opacity: 1;
+                transform: scale(1) rotate(0deg);
+            }
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <h3>CSS3 Animation</h3>
+    </div>
+</body>
+</html>

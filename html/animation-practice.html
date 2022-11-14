@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>상품 페이지에 애니메이션 넣기</title>
+    <style>
+        * {
+            margin: 0 auto;
+            padding: 0;
+            text-align: center;
+        }
+        body {
+            width: 100%
+        }
+        .prod-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        .prod-list li {
+            position: relative;
+            float: left;
+            padding: 0;
+            margin: 10px;
+            overflow: hidden;
+        }
+        .prod-list img {
+            margin:0;
+            padding:0;
+            float:left;
+            z-index: 5;
+        }
+        .prod-list .caption {
+            position: absolute;
+            top: 200px;
+            width: 300px;
+            height: 200px;
+            padding-top: 20px;
+            background: rgba(0,0,0,0.3);
+            opacity: 0;
+            transition: all 1s ease-in-out;
+            z-index:10;
+        }
+        .prod-list li:hover .caption {
+            opacity: 1;
+            transform: translateY(-200px);
+        }
+        .prod-list .caption h2, .prod-list .caption p {
+            color:whitesmoke;
+            text-align: center;
+        }
+        a { text-decoration: none;
+            text-align: center;
+            color: whitesmoke
+        }
+
+        h1 {
+            text-align: center;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>특가 4박 5일 유럽 여행 캠페인</h1>
+    <div id="container">
+        <ul class="prod-list">
+            <li>
+                
+                <img src="../images/louvre-g5261db5ba_1920.jpg" height="200px" width="300px">
+                <div class="caption">
+                    <a href="#"><h2>영국 4박 5일 패키지</h2></a>
+                    <p>여행상품 설명 텍스트</p>
+                    <p>가격 : 2,700,000원</p>
+                </div>
+            </li>
+            <li>
+                <img src="../images/eiffel-tower-g9007addd0_1920.jpg" height="200px" width="300px">
+                <div class="caption">
+                    <a href="#"><h2>프랑스 4박 5일 패키지</h2></a>
+                    <p>여행상품 설명 텍스트2</p>
+                    <p>가격 :3,000,000원</p>
+                </div>
+            </li>
+            <li>
+                <img src="../images/outlook-gaeefed7de_1920.jpg" height="200px" width="300px">
+                <div class="caption">
+                    <a href="#"><h2>스위스 4박 5일 패키지</h2></a>
+                    <p>여행상품 설명 텍스트3</p>
+                    <p>가격 : 2,900,000원</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

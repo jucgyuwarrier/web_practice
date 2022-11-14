@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform-origin</title>
+    <style>
+        .origin {
+            width: 160px;
+            height: 240px;
+            border: 1px solid black;
+            float: left;
+            margin: 40px;
+        }
+        .beach, .house, .kitchen, .jeju{
+            transform:rotateZ(10deg) /*특정 지점을 변형의 기준으로 설정*/
+        }
+        .ltop .beach {
+            transform-origin: left top;
+        }
+
+        .rtop .house {
+            transform-origin: right top;
+        }
+        .lbottom .kitchen {
+            transform-origin: left bottom;
+        }
+        .rbottom .jeju {
+            transform-origin: right bottom;
+        }
+    </style>
+</head>
+<body>
+    <div class="origin">
+        <div class="ltop">
+            <img src="images/beach-g6af0a5c29_1280.jpg" class="beach" width="160px" height="240px">
+        </div>
+    </div>
+    <div class="origin">
+        <div class="rtop">
+            <img src="images/house.jpg" class="house" width="160px" height="240px">
+        </div>
+    </div>
+    <div class="origin">
+        <div class="lbottom">
+            <img src="images/kitchen-g795d95088_1280.jpg" class="kitchen" width="160px" height="240px">
+        </div>
+    </div>
+    <div class="origin">
+        <div class="rbottom">
+            <img src="images/jeju.jpg" class="jeju" width="160px" height="240px">
+        </div>
+    </div>
+</body>
+</html>

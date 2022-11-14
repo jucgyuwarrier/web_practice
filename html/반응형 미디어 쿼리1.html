@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응형 미디어 쿼리1</title>
+    <style>
+
+        body {
+            margin: 0 auto;
+            background: white;
+            width: 1600px;
+            padding: 0;
+        }
+
+        header {
+            height: 50px;
+            text-align: center;
+            border: 1px solid gainsboro;
+            background: aliceblue;
+            margin: 20px;
+        }
+        
+        @media screen and (min-width: 1720px) {
+            #container {
+                padding: 10px;
+                height: auto;
+                display: flex;
+                background: whitesmoke;
+                margin: 5px;
+                flex-wrap: wrap;
+                border: 1px solid gray;
+            }
+            #container a {
+                text-decoration: none;
+            }
+          .box a h2 {
+                text-align: center;
+                color: white;
+                position: relative;
+                }
+            #container .box {
+                margin: 0 auto;
+                width: 500px;
+                height: 500px;
+                
+            }
+            #container .box img {
+                width: 480px;
+                height: 480px;
+                z-index: 5;
+            }
+            #container .box .caption {
+                position: absolute;
+                width: 480px;
+                height: 480px;
+                opacity: 0;
+                background-color: rbga(0,0,0,0,3);
+                transition: all 1s ease-in-out;
+                z-index: 10;
+                
+            }
+            #container .box:hover .caption {
+                opacity: 1;
+                transform: translateY(-300px);
+            }
+
+
+        }
+
+        @media screen and (min-width: 768px) {
+
+        }
+
+        @media screen and (min-width: 992px) {
+
+        }
+
+        @media screen and (max-width: 767px) {
+
+
+        }
+    </style>
+</head>
+<body>
+    <header><h2>반응형 미디어 쿼리 연습</h2></header>
+    <div id="container">
+        <div class="box">
+                    <img src="../images/chiwawa.jpg">
+                    <div class="caption">
+                        <a href="#"><h2>강아지 용품 보러가기</h2></a>
+                    </div>
+        </div>
+        <div class="box">
+            <img src="../images/cat toy.jpg">
+            <div class="caption">
+                <a href="#"><h2>고양이 용품 보러가기</h2></a>
+            </div>
+        </div>
+        <div class="box">
+            <img src="../images/hamster-g89f697538_1920.jpg">
+            <div class="caption">
+                <a href="#"><h2>햄스터 용품 보러가기</h2></a>
+            </div>
+        </div>
+        <div class="box">
+            <img src="../images/leopard-gecko-gc8fffaa12_1920.jpg">
+            <div class="caption">
+                <a href="#"><h2>파충류 용품 보러가기</h2></a>
+            </div>
+        </div>
+        <div class="box">
+            <img src="../images/fish.jpg">
+            <div class="caption">
+                <a href="#"><h2>관상어 용품 보러가기</h2></a>
+        </div>
+    </div>
+    <div class="box">
+        <img src="../images/animal1.jpg">
+        <div class="caption">
+            <a href="#"><h2>따봉도치</h2></a>
+        </div>
+    </div>
+</body>
+</html>
