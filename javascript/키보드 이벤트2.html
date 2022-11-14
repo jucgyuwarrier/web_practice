@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>키보드 키 코드 이용하기</title>
+    <script>
+        document.addEventListener('DOMContentLoaded',() => {
+            const h1 = document.querySelector('h1')
+            const print = (event) => {
+                let output= ''
+            output += `alt: ${event.altKey}<br>`
+            output += `ctrl: ${event.ctrlKey}<br>`
+            output += `shift: ${event.shiftKey}<br>`
+            output += `code: ${typeof(event.code)!=='undefined' ?
+             event.code:event.keyCode}<br>`
+             //키가 정의되지 않은게 아니라면 입력한 키를 표시 아니면 키를 나타내는 숫자를 표시
+            //3항 연산자
+                h1.innerHTML=output
+            }
+
+            document.addEventListener('keydown', print)//누를때 표시하고
+            document.addEventListener('keyup', print)// 땔때도 표시
+        })
+    </script>
+</head>
+<body>
+    <h1></h1>
+</body>
+</html>

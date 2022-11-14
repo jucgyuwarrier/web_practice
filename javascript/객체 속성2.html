@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기본 자료형을 객체로 선언하기</title>
+</head>
+<body>
+    <script>
+        //const 객체 = new 객체 자료형 이름()
+
+        const f = new Number(273)
+        
+        console.log(typeof f)
+        f.sample = 10
+        // 키와 값 추가 
+        console.log(f.sample)
+
+        console.log(f)
+
+
+        //숫자와 똑같이 활용할 수 있고, valueof()메소드를 사용해 값을 추출할 수도 있음
+        console.log(f + 0)
+
+        console.log(f.valueOf())
+    </script>
+
+</body>
+</html>

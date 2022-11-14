@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기본 이벤트 막기 preventDefault()</title>
+    <script>
+        document.addEventListener('DOMContentLoaded',() => {
+            const imgs = document.querySelectorAll('img')
+
+            imgs.forEach((img) => {
+                img.addEventListener('contextmenu',(event) => {
+                        event.preventDefault(imgs)
+                    })
+                })
+            })
+    </script>
+</head>
+<body>
+    <img src="../images/cat toy.jpg" height="400px" width="400px" alt="고양이1">
+    <img src="../images/cat-g04745e85a_1280.jpg" height="400px" width="400px" alt="고양이2">
+</body>
+</html>

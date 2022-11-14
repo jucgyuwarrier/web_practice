@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number 객체 isFinite()</title>
+</head>
+<body>
+    <script>
+        const n = 10 / 0 
+        //+무한대 생성
+        console.log(n)
+
+        const o = -10 / 0
+        //-무한대 생성
+        console.log(o)
+
+        console.log(Number.isFinite(n))
+        //n은 유한한 숫자인가?
+
+        console.log(Number.isFinite(o))
+
+        console.log(Number.isFinite(1))
+
+        console.log(Number.isFinite(10))
+
+
+    </script>
+</body>
+</html>

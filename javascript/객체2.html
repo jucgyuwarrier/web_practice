@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체의 속성과 메소드</title>
+</head>
+<body>
+    //객체의 속성은 모든 형태의 자료값을 가질 수 있음
+    <script>
+        const pet = {
+            name:'구름',
+            eat:function(food) {
+                alert(`${this.name}은 ${food} 을 먹습니다.`)
+            }
+        }
+
+        pet.eat('밥')
+    </script>
+</body>
+</html>

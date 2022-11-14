@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const num = 52000
+        num.원 = function() {
+            return this.valueOf()+'원'
+        }
+        console.log(num.원())
+        //숫자는 기본 자료형이라 안에 객체를 넣을 수 없음
+        //매서드 외 속성을 넣으려면 new 객체자료형이름()으로 생성자를 써야함
+    </script>
+
+    <script>
+        const num1 = new Number(52000)
+        num1.a = 100
+        
+        console.log(num1)
+
+        console.log(num1 + num1.a)
+
+    </script>
+
+    <script>
+        
+        //기본형에 매서드를 넣으려면 prototype으로 해야함
+
+        Number.prototype.원 = function() {
+            return this.valueOf() +'원'
+        }
+        const num2 = 52000
+        console.log(num2.원())
+
+    </script>
+</body>
+</html>

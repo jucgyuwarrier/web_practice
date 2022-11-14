@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const itemsD = ["사과", "귤", "바나나", "오렌지"]
+        console.log(itemsD.splice(1, 0, "양파")) // 1번째 자리에 양파를 추가함
+        console.log(itemsD)
+
+        const itemsE = ["사과", "귤", "바나나", "오렌지"]
+        console.log(itemsE.splice(1, 1, "양파")) // 1번째 자리에 원래 있던걸 지우고 양파를 추가
+        console.log(itemsE)
+    </script>
+</body>
+</html>

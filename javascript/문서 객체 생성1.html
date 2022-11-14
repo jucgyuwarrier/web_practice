@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document.createElement(), appendChild</title>
+    <script>
+        document.addEventListener('DOMContentLoaded',() => {
+            //문서 객체 생성
+            const header = document.createElement('h1')
+            //생성했다고 문서 객체가 배치되는것은 아님 
+
+            //생성한 태그 조작
+            header.textContent = '문서 객체 동적으로 생성하기'
+            header.setAttribute('data-custom', '사용자 정의 속성')
+            header.style.color = 'white'
+            header.style.backgroundColor = 'black'
+
+            //h1 태그를 body 태그 아래에 추가하기
+            document.body.appendChild(header)
+            //body 아래에 자식객체로 추가
+        })
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

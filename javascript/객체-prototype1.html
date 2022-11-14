@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prototype 객체</title>
+</head>
+<body>
+    <script>
+        //power() 메소드 추가
+        Number.prototype.power = function (n=2) {
+            return this.valueOf()**n
+        }
+
+        //Number 객체의 power()메소드를 사용
+        const a = 12
+        console.log('a.power():', a.power()) //기본값 n=2가 사용됨
+        console.log('a.power(3):', a.power(3))
+        console.log('a.power(4):', a.power(4))
+    </script>
+
+    <script>
+        //프로토타입으로 메소드 추가하기
+        const j = '안녕하세요'
+        console.log(j.indexOf('안녕')) //0부터 시작이라 인덱스는 0
+        console.log(j.indexOf('하세')) //2 
+        console.log(j.indexOf('없는 문자열')) //없는 문자열은 -1을 출력
+    </script>
+
+    <script>
+        //contain() 메소드 추가
+        String.prototype.contain=function(data) {
+            return this.indexOf(data) >= 0
+        }
+
+        Array.prototype.contain=function(data) {
+            return this.indexOf(data)>=0 
+            //indexOf는 해당 값이 없으면 -1을 리턴함으로 유효성 검사에 쓰일 수도
+        }
+
+        //string객체의 contain() 메소드를 사용합니다.
+        const c = '안녕하세요'
+        console.log(`안녕 in 안녕하세요: ${c.contain('안녕')}`)
+        console.log('없는데 in 안녕하세요: ' + c.contain('없는데'))
+
+        //Array 객체의 contain() 메소드를 사용합니다.
+        const d = [273, 32, 103, 57, 52]
+        console.log('273 in [273, 32, 103, 57, 52]:', d.contain(273))
+        console.log('0 in [273, 32, 103, 57, 52]:',d.contain(0))
+    </script>
+</body>
+</html>

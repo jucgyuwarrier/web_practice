@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>글자 입력 양식 유효성검사 이벤트</title>
+    <script>
+        document.addEventListener('DOMContentLoaded',()=> {
+            const input = document.querySelector('input')
+            const p = document.querySelector('p')
+
+            const isEmail = (value) => {
+                //골뱅이를 가지고 있고 && 골뱅이 뒤에 점이 있다면
+            return (value.indexOf('@')>1) && (value.split('@')[1].indexOf('.')>1)
+            }
+
+            input.addEventListener('keyup',(event)=> {
+                const value = event.currentTarget.value
+                if(isEmail(value)) {
+                    //isEmail 값이 true, false에 따라 다른 스타일 적용
+                    p.style.color= 'green'
+                    p.textContent = `이메일 형식입니다: ${value}`
+                } else {
+                    p.style.color = 'red'
+                    p.textContent = `이메일 형식이 아닙니다: ${value}`
+                }
+            })
+        })
+    </script>
+</head>
+<body>
+    <input type="text">
+    <p></p>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>키보드 키 코드 사용하기</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            //별 초기설정
+            const star = document.querySelector('h1')
+            star.style.position = 'absolute'
+
+            //별 이동 출력 기능
+            let [x,y] = [0,0]
+            const block = 20
+            const print = () => {
+                star.style.left = `${x*block}px`
+                //-+로 좌우
+                star.style.top = `${y*block}px`
+                //-+로 상하
+            }
+            print()
+            //가동시 0*20이라 반응하지 않음
+
+
+            //별 이동하는 기능
+            const [left, up, right, down] = [37,38,39,40]
+            //방향키 keycode를 쉽게 사용할 수 있게 변수를 사용해 이름을 붙임
+            document.body.addEventListener('keydown',(event) => {
+                //키가 눌렸을때 키코드값을 매개변수로 switch 가동
+                switch(event.keyCode) { 
+                    case left: x -= 1
+                    break
+                    case up: y -= 1
+                    break
+                    case right: x += 1
+                    break
+                    case down: y += 1
+                    break
+                }
+                print()
+                //x,y값이 0이 아니게 됨으로 이동할 수 있게됨
+            })
+        })
+    </script>
+</head>
+<body>
+    <h1>★</h1>
+</body>
+</html>

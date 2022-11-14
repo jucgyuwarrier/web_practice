@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>    
+    <script>
+        a = 0
+        function f(x) {
+            a = x*x
+            console.log(a)
+        }
+
+        f(3)
+    </script>
+
+    <script>
+        function f(x) {
+            return x*x }
+        console.log(f(3))
+    </script>
+
+    <script>
+        function sumAll(a,b) {
+            let output=1
+            for(let i=a; i <=b; i++) {
+                output *=i
+            }
+            return output
+        }
+
+        console.log(`1부터 2까지의 곱: ${sumAll(1, 2)}`)
+        console.log(`1부터 6까지의 곱: ${sumAll(1, 6)}`)
+    </script>
+</body>
+</html>

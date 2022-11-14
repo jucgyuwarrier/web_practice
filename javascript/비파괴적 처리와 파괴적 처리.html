@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const a = "안녕"
+        const b = "하세요"
+        const c = a + b
+        console.log(c)
+        console.log(a)
+        console.log(b) //처리후에도 원본내용이 변경되지 않음 비파괴적 처리
+
+        const array=["사과","배","바나나"]
+        array.push("귤")
+        console.log(array) //처리후 원본내용이 변경됨 파괴적 처리
+    </script>
+</body>
+</html>

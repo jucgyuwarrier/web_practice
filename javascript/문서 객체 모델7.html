@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스타일 조작하기 style 속성</title>
+    <script>
+        document.addEventListener('DOMContentLoaded',()=>{
+            const divs = document.querySelectorAll('body>div') 
+            //body 태그 아래에 div태그를 선택
+
+            divs.forEach((div,index)=> {//div의 개수만큼 반복하여 출력
+                console.log(div, index)
+                const val = index*10
+                div.style.height=`10px` 
+                //크기를 지정할때는 반드시 단위를 붙여줘야함
+                div.style.backgroundColor = `rgba(${val},${val},${val})`
+            })
+        })
+    </script>
+</head>
+<body>
+    <div></div><div></div><div></div><div></div><div></div>
+    <div></div><div></div><div></div><div></div><div></div>
+    <div></div><div></div><div></div><div></div><div></div>
+    <div></div><div></div><div></div><div></div><div></div>
+    <div></div><div></div><div></div><div></div><div></div>
+</body>
+</html>

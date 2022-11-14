@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>focus와 blur 이벤트</title>
+    <script>
+        document.addEventListener('DOMContentLoaded',() => {
+            const textarea = document.querySelector('textarea')
+            const h1 = document.querySelector('h1')
+            let timerId
+
+            textarea.addEventListener('focus',(event) => {
+                //클릭해서 초점이 텍스트에리어에 맞춰 졌을때 이벤트 실행함
+                //click이랑 비슷함
+                timerId = setInterval(() => {
+                    const length = textarea.value.length
+                    h1.textContent = `글자 수: ${length}`
+                },50) //0.05초마다 글자수 확인 실행
+            })
+
+            textarea.addEventListener('blur', (event) => {
+                clearInterval(timerId) 
+                // 초점이 벗어났을시, 0.05초마다 글자수 확인하던 인터벌을 해제
+            })
+        })
+    </script>
+</head>
+<body>
+    <h1></h1>
+    <textarea></textarea>
+</body>
+</html>

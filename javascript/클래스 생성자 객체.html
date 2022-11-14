@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>클래스와 생성자(constructor)</title>
+    <script>
+        class Student {
+  // 생성자는 클래스를 기반으로 인스턴스를 생성할 때 처음 호출되는 메소드임
+  // 따라서 생성자에서는 속성을 추가하는등의 객체 초기화 기능을 줌         
+            constructor(이름, 국어, 영어, 수학, 과학) {
+                this.이름 = 이름
+                this.국어 = 국어
+                this.영어 = 영어
+                this.수학 = 수학
+                this.과학 = 과학
+            }
+        }
+
+        //객체를 선언합니다.
+        const students = []
+        students.push(new Student('구름', 87, 98, 88, 90))
+        students.push(new Student('별이', 92, 98, 96, 88))
+        students.push(new Student('겨울', 76, 96, 94, 86))
+        students.push(new Student('바다', 98, 52, 98, 92))
+        console.log(students)
+    </script>
+
+
+</head>
+<body>
+    
+</body>
+</html>

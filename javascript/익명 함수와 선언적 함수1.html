@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>익명 함수의 호출과 사용 </title>
+</head>
+<body>
+    <script>
+        //익명 함수는 순차적인 코드 실행에서 코드가 해당 줄을 읽을 때 생성됨
+        //익명 함수 선언
+        let 익명함수
+
+        익명함수 = function() {
+            console.log('1번째 익명 함수입니다.')
+        }
+        익명함수 = function() {
+            console.log('2번째 익명 함수입니다.')
+        }
+
+        //익명 함수 호출
+        익명함수()
+    </script>
+</body>
+</html>
