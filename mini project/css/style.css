@@ -1,0 +1,97 @@
+@charset "utf-8";
+ * {
+    margin: 0px;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: aliceblue;
+}
+#container {
+    display:block;
+    width: 320px;
+    margin: 50px auto;
+}
+.card {
+    float: left;
+    position: relative;
+    width: 300px;
+    height: 500px;
+    margin: 20px 10px;
+    border: 1px solid seashell;
+    background-color: white;
+}
+.words {
+    float: right;
+    padding: 10px;
+}
+@media screen and (min-width:768px) and (max-width:1719px) {
+    #container {
+        width: 570px;
+        margin: 50px auto;
+    }
+    .card {
+        position:relative;
+        width: 550px;
+        height: 250px;
+        margin: 20px 10px;
+        border: 1px solid seashell;
+        background-color: white;
+    }
+    .words {
+        position: absolute;
+        left: 310px;
+        top: 50px;
+        text-align: center;
+        width: 200px;
+    }
+}
+@media screen and (max-width: 767px) {
+    #container {
+        width: 570px;
+        margin: 50px auto;
+    }
+    .card {
+        position: relative;
+        top:0;
+        width: 550px;
+        height: 250px;
+        margin: 20px 10px;
+        border: 1px solid seashell;
+        background-color: white;
+    }
+    .card img {
+        height: 50%;
+        width: 100%;
+    }
+    .words {
+        position: relative;
+        left: 310px;
+        top: 50px;
+        text-align: center;
+        width: 200px;
+    } 
+}
+
+@media screen and (min-width: 1710px) {
+    #container {
+        width: 1710px;
+        margin: 50px auto;
+    }
+    .card {
+        position:relative;
+        float: left;
+        width: 550px;
+        height: 250px;
+        margin: 10px;
+        border: 1px solid seashell;
+        background-color: white;
+    } 
+    .word {
+        position:absolute;
+        left:310px;
+        top:50px;
+        text-align: center;
+        width:200px;
+    }
+}
